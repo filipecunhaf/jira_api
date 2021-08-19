@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.files          = Dir['lib/**/*.rb'] + Dir['assets/*'] + Dir['bin/*']
   spec.require_paths  = ["lib"]
   spec.required_ruby_version = '>= 2.5.1'
-  spec.add_runtime_dependency( 'excon', '~> 0.62' )
+  spec.add_runtime_dependency( 'excon', '~> 0.71.0' )
   spec.add_runtime_dependency( 'oj', '~> 3.7' )
   spec.add_runtime_dependency( 'json', '~> 2.1' )
   spec.add_runtime_dependency( 'curb', '~> 0.9.8' )
