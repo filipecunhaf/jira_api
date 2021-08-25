@@ -64,9 +64,13 @@ class JiraAPI
         headers: _headers,
         expects: [200, 201, 204, 400, 401],
 <<<<<<< HEAD
+<<<<<<< HEAD
         read_timeout: 300
         write_timeout: 300
         
+=======
+        read_timeout: 360,
+>>>>>>> 1f45a77 (add timout)
 =======
         read_timeout: 360,
 >>>>>>> 1f45a77 (add timout)
