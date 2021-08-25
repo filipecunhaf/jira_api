@@ -15,14 +15,14 @@ class JiraAPI
       "Content-Type" => "application/json"
     }
 
-    def initialize( uri )
-      @url = URI.parse( uri ).to_s
-    end
-    # @@connection = nil
-  
-    # def self.url=( uri )
+    # def initialize( uri )
     #   @url = URI.parse( uri ).to_s
     # end
+    @@connection = nil
+  
+    def self.url=( uri )
+      @url = URI.parse( uri ).to_s
+    end
 
     def self.url
       @url ||= ''
@@ -63,17 +63,7 @@ class JiraAPI
         query: query,
         headers: _headers,
         expects: [200, 201, 204, 400, 401],
-<<<<<<< HEAD
-<<<<<<< HEAD
-        read_timeout: 300
-        write_timeout: 300
-        
-=======
         read_timeout: 360,
->>>>>>> 1f45a77 (add timout)
-=======
-        read_timeout: 360,
->>>>>>> 1f45a77 (add timout)
         # persistent: true,
         # idempotent: true,
         # retry_limit: 2,
