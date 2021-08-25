@@ -14,10 +14,17 @@ Gem::Specification.new do |spec|
   spec.require_paths  = ["lib"]
   spec.required_ruby_version = '>= 2.5.1'
 <<<<<<< HEAD
+<<<<<<< HEAD
   spec.add_runtime_dependency( 'excon', '~> 0.71.0' )
 =======
   spec.add_runtime_dependency( 'excon', '>= 0.62', '~> 0.62' )
 >>>>>>> c009b2c (accept excon gem greater than 0.62)
+=======
+  spec.add_runtime_dependency( 'excon', '>= 0.62', '~> 0.62' )
+=======
+  spec.add_runtime_dependency( 'excon', '~> 0.71.0' )
+>>>>>>> c3ee9e0 (Update jira_api.gemspec)
+>>>>>>> 5da9e97 (Update jira_api.gemspec)
   spec.add_runtime_dependency( 'oj', '~> 3.7' )
   spec.add_runtime_dependency( 'json', '~> 2.1' )
   spec.add_runtime_dependency( 'curb', '~> 0.9.8' )
