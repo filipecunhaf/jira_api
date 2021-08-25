@@ -63,13 +63,16 @@ class JiraAPI
         query: query,
         headers: _headers,
         expects: [200, 201, 204, 400, 401],
+<<<<<<< HEAD
         read_timeout: 300
         write_timeout: 300
         
+=======
+        read_timeout: 360,
+>>>>>>> 1f45a77 (add timout)
         # persistent: true,
         # idempotent: true,
         # retry_limit: 2,
-        # read_timeout: 360,
         # retry_interval: 10,
         # debug_response: true,
         # debug_request: true,
