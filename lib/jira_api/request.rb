@@ -74,7 +74,6 @@ class JiraAPI
       }
       #puts options.inspect  
       # return
-  
       response = connection.request(options)
       #puts response.class
     

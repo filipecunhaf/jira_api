@@ -32,8 +32,8 @@ module JiraAPI::Issue
     self.set_assignee( issue_key, JiraAPI::Session.user )
   end
 
-  def search( jql, maxResults=5000, fields=[]  )
-    query = { :jql => jql, :maxResults => maxResults, :fields => fields }
+  def search( jql, maxResults=5000, startAt=0, fields=[])
+    query = { :jql => jql, :startAt => startAt, :fields => fields }
     JiraAPI::Request.get( "#{JiraAPI::API_PREFIX}/search", payload=nil, query=query ).body # FIX - validation
   end
 
