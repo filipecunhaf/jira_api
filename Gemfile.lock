@@ -1,9 +1,15 @@
 PATH
   remote: .
   specs:
+<<<<<<< HEAD
     jira_api (0.0.1)
       curb (~> 0.9.8)
       excon (~> 0.62)
+=======
+    jira_api (0.1.0)
+      curb (~> 0.9.8)
+      excon (~> 0.71, >= 0.71)
+>>>>>>> develop
       json (~> 2.1)
       oj (~> 3.7)
 
@@ -37,4 +43,8 @@ DEPENDENCIES
   rspec (~> 3.2)
 
 BUNDLED WITH
+<<<<<<< HEAD
    1.17.1
+=======
+   1.17.3
+>>>>>>> develop
