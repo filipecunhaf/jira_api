@@ -43,39 +43,24 @@ class JiraAPI
       http_request(:put, path, payload, query, headers)
     end
 
-    def self.delete(path = nil, payload = nil, query = nil, headers = nil)
-      http_request(:delete, path, payload, query, headers)
-    end
-
-    def self.http_request(method = :get, path, payload, query, headers)
-      # puts @url.inspect
+    private
+    def self.http_request( method=:get, path, payload, query, headers )
       _headers = headers || @headers
-      connection = Excon.new(@url)
-      # puts payload.inspect
+      connection = Excon.new( @url )
       body = payload ? payload.to_json : ''
       options = {
         method: method,
-        # proxy: 'http://127.0.0.1:8081',
         path: path,
         body: body,
         query: query,
         headers: _headers,
         expects: [200, 201, 204, 400, 401, 500],
         read_timeout: 360,
-        # persistent: true,
-        # idempotent: true,
-        # retry_limit: 2,
-        # retry_interval: 10,
-        # debug_response: true,
-        # debug_request: true,
         tcp_nodelay: true
       }
-      # puts options.inspect
-      # return
-      connection.request(options)
-      # puts response.class
+      response = connection.request(options)
+      return response
 
-      # return response.body if response.body.length > 0
     end
   end
 end
