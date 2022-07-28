@@ -43,6 +43,10 @@ class JiraAPI
       http_request(:put, path, payload, query, headers)
     end
 
+    def self.delete(path = nil, payload = nil, query = nil, headers = nil)
+      http_request(:delete, path, payload, query, headers)
+    end
+
     private
     def self.http_request( method=:get, path, payload, query, headers )
       _headers = headers || @headers
